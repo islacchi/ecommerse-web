@@ -1,0 +1,25 @@
+POST http://localhost:3500/register
+Content-Type:  application/json
+
+{
+    "username" : "walt1",
+    "password" : "kate12"
+}
+###
+POST http://localhost:3500/auth
+Content-Type:  application/json
+
+{
+    "username" :"raiko331@gmail.com",
+    "password" : "kaye1234"
+}
+###
+GET http://localhost:3500/products
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaWtvMzMxQGdtYWlsLmNvbSIsImlhdCI6MTcxNDIwNDU0OCwiZXhwIjoxNzE0MjkwOTQ4fQ.MLxSLRdWsHpKGyfFYHOwZfCMrwkw6qFH5z5X_gPygSQ; Max-Age=86400; Path=/; Expires=Sun, 28 Apr 2024 07:55:48 GMT; HttpOnly; Secure; SameSite=None
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaWtvMzMxQGdtYWlsLmNvbSIsInJvbGVzIjp7IlVzZXIiOjIwMDF9LCJpYXQiOjE3MTQyMDQ1NDgsImV4cCI6MTcxNDIwNDg0OH0.OV-NFw5vPngrKBcjUuR7B5zd1eQ-oAKtxmb0CAWG58M
+###
+GET http://localhost:3500/logout
+
+
+
+

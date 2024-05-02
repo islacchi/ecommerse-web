@@ -1,0 +1,248 @@
+/*---------------------
+  Sign In
+-----------------------*/
+
+$color_1: #fff;
+$color_2: #000;
+$color_3: #999;
+$color_4: #7fad39;
+$font-family_1: "Cairo", sans-serif;
+$border-color_1: #7fad39;
+
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap"); */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-family_1;
+}
+html {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	place-items: center;
+	background: #fff;
+}
+body {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	place-items: center;
+	background: #fff;
+}
+&::selection {
+	background: #1a75ff;
+	color: $color_1;
+}
+.wrapper {
+	overflow: hidden;
+	max-width: 390px;
+	background: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0px 15px 20px rgba(127, 173, 57);
+	.title-text {
+		display: flex;
+		width: 200%;
+	}
+	.title {
+		width: 50%;
+		font-size: 35px;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	.slide-controls {
+		position: relative;
+		display: flex;
+		height: 50px;
+		width: 100%;
+		overflow: hidden;
+		margin: 30px 0 10px 0;
+		justify-content: space-between;
+		border: 1px solid lightgrey;
+		border-radius: 15px;
+	}
+	.form-container {
+		width: 100%;
+		overflow: hidden;
+	}
+}
+.slide-controls {
+	.slide {
+		height: 100%;
+		width: 100%;
+		color: $color_1;
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		line-height: 48px;
+		cursor: pointer;
+		z-index: 1;
+		transition: all 0.6s ease;
+	}
+	label.signup {
+		color: $color_2;
+	}
+	.slider-tab {
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		left: 0;
+		z-index: 0;
+		border-radius: 15px;
+		background: -webkit-linear-gradient(left, #486220, #678d2e, #86b73e, #88d90c);
+		transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+}
+input[type="radio"] {
+	display: none;
+}
+#signup {
+	&:checked {
+		~ {
+			.slider-tab {
+				left: 50%;
+			}
+			label.signup {
+				color: $color_1;
+				cursor: default;
+				user-select: none;
+			}
+			label.login {
+				color: $color_2;
+			}
+		}
+	}
+}
+#login {
+	&:checked {
+		~ {
+			label.signup {
+				color: $color_2;
+			}
+			label.login {
+				cursor: default;
+				user-select: none;
+			}
+		}
+	}
+}
+.form-container {
+	.form-inner {
+		display: flex;
+		width: 200%;
+		form {
+			width: 50%;
+			transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+	}
+}
+.form-inner {
+	form {
+		.field {
+			height: 50px;
+			width: 100%;
+			margin-top: 20px;
+			input {
+				height: 100%;
+				width: 100%;
+				outline: none;
+				padding-left: 15px;
+				border-radius: 15px;
+				border: 1px solid lightgrey;
+				border-bottom-width: 2px;
+				font-size: 17px;
+				transition: all 0.3s ease;
+				&:focus {
+					border-color: $border-color_1;
+				}
+				&::placeholder {
+					color: $color_3;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+		.pass-link {
+			margin-top: 5px;
+			a {
+				color: $color_4;
+				text-decoration: none;
+				color: $color_4;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+					text-decoration: underline;
+				}
+			}
+		}
+		.signup-link {
+			text-align: center;
+			margin-top: 30px;
+			a {
+				color: $color_4;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.login-link {
+			text-align: center;
+			margin-top: 30px;
+			a {
+				color: $color_4;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+form {
+	.field {
+		input {
+			&:focus {
+				&::placeholder {
+					color: $color_4;
+				}
+			}
+		}
+	}
+	.btn {
+		height: 50px;
+		width: 100%;
+		border-radius: 15px;
+		position: relative;
+		overflow: hidden;
+		.btn-layer {
+			height: 100%;
+			width: 300%;
+			position: absolute;
+			left: -100%;
+			background: -webkit-linear-gradient( right, #304117, #59792a, #7fad39, #90c342 );
+			border-radius: 15px;
+			transition: all 0.4s ease;
+		}
+		&:hover {
+			.btn-layer {
+				left: 0;
+			}
+		}
+		input[type="submit"] {
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+			position: relative;
+			background: none;
+			border: none;
+			color: $color_1;
+			padding-left: 0;
+			border-radius: 15px;
+			font-size: 20px;
+			font-weight: 500;
+			cursor: pointer;
+		}
+	}
+}

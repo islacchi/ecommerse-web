@@ -1,0 +1,136 @@
+20240425	11:31:39	786b00fa-ceac-4f3b-91ee-ca7bc298594b	Error: No default engine was specified and no extension was provided.
+20240425	11:31:44	13cfc7c8-73d6-479d-ad11-a1f2806dc461	Error: No default engine was specified and no extension was provided.
+20240425	11:32:51	8c7c5c54-8c86-4c63-ba97-e9bf3e65b35d	Error: No default engine was specified and no extension was provided.
+20240425	11:33:01	04a4239a-b40f-4dbc-921e-02fa65583d8a	Error: No default engine was specified and no extension was provided.
+20240425	11:38:25	50a6993a-6e63-4a99-baab-83288049ed65	Error: No default engine was specified and no extension was provided.
+20240425	11:40:51	87e2c04c-44f2-43c2-aad5-ff7bb5174084	Error: No default engine was specified and no extension was provided.
+20240425	11:41:04	9a32af25-35a9-44d4-a6fe-a0d76f791b3d	Error: No default engine was specified and no extension was provided.
+20240425	11:41:05	0f4dc8e3-2ab3-4045-8b80-d62021392bb8	Error: No default engine was specified and no extension was provided.
+20240425	11:45:49	1489b54d-e96d-417a-84d9-3fbdb8d2b321	Error: No default engine was specified and no extension was provided.
+20240425	11:45:50	4f047820-1729-460b-9c3c-4e6e995b5760	Error: No default engine was specified and no extension was provided.
+20240425	11:45:50	94d08cb8-7438-4fec-84cf-273e7194d0f4	Error: No default engine was specified and no extension was provided.
+20240425	11:48:12	5cd469f1-7fca-4564-907c-3c537a844fa1	Error: No default engine was specified and no extension was provided.
+20240425	11:48:13	25daaf53-a184-414a-a631-2831e6ec016c	Error: No default engine was specified and no extension was provided.
+20240425	11:48:19	e2ac47e9-6a01-4650-a459-0dafcfb3d757	Error: No default engine was specified and no extension was provided.
+20240425	11:48:25	c74eae9f-cfd1-4387-af13-ca46fd1816a8	Error: No default engine was specified and no extension was provided.
+20240425	11:50:52	34bee90f-1d3d-424c-84c4-3bcd6472fa6a	Error: No default engine was specified and no extension was provided.
+20240425	11:50:53	fb829e1f-7757-41c5-8223-661deccd4260	Error: No default engine was specified and no extension was provided.
+20240425	11:50:53	edfd6157-7ef3-4bf3-84e2-52725ba52ead	Error: No default engine was specified and no extension was provided.
+20240425	11:50:53	69aef717-8ed0-413e-b7f9-d1fd421b610f	Error: No default engine was specified and no extension was provided.
+20240425	11:50:53	e6159baa-8c37-4f7f-b4a3-bebe9624a14d	Error: No default engine was specified and no extension was provided.
+20240425	11:56:51	0ae3d2ec-2b78-43f6-8286-6d6c21c50b72	Error: Failed to lookup view "C:\Users\USER\Documents\New Folder\node\views\sign-in" in views directory "C:\Users\USER\Documents\New Folder\node\views"
+20240425	11:57:57	b3881949-338c-4e10-93a1-496af413875d	Error: Failed to lookup view "sign-in" in views directory "C:\Users\USER\Documents\New Folder\node\views"
+20240425	11:58:00	d18a98c1-baed-440c-b4a6-24e423135ef9	Error: Failed to lookup view "sign-in" in views directory "C:\Users\USER\Documents\New Folder\node\views"
+20240425	11:58:44	7b7fb888-e0a2-44f6-8fe0-3f6af0798b74	Error: Failed to lookup view "index" in views directory "C:\Users\USER\Documents\New Folder\node\views"
+20240425	12:33:15	06cc5a81-c6f7-455b-a421-e26e23260700	TypeError: Cannot read properties of undefined (reading 'username')
+20240425	12:33:17	b23796f3-39a0-4851-b606-ac901f5095ae	TypeError: Cannot read properties of undefined (reading 'username')
+20240425	12:33:17	4c94ca38-27f8-4f73-b557-7b9cbeffc4ea	TypeError: Cannot read properties of undefined (reading 'username')
+20240425	13:34:14	a4ec6ba4-df63-447a-abe0-de6addced22d	Error: Cannot set headers after they are sent to the client
+20240425	13:34:48	2c82f33f-5d3e-48ca-bf82-5a6b1975424e	Error: Cannot set headers after they are sent to the client
+20240426	13:59:08	9a03436e-12de-439f-aa40-2c0cb95db77d	Error: Cannot set headers after they are sent to the client
+20240426	19:27:17	e32fa7ff-b47f-44ca-ab60-52157afd1737	ReferenceError: C:\Users\USER\Documents\New Folder\node\views\index.ejs:59
+    57|       </div>
+    58|       <div class="header__top__right__auth">
+ >> 59|         <%if(username){ %>
+    60|           <a href="#"><i class="fa fa-user"></i> <%=username%></a>
+    61|           <%}else{%>
+    62|         <a href="./sign-in.html"><i class="fa fa-user"></i> Login</a>
+
+username is not defined
+20240426	21:23:14	47946d14-25f7-4123-88ff-245b65809f6b	ReferenceError: C:\Users\USER\Documents\New Folder\node\views\index.ejs:59
+    57|       </div>
+    58|       <div class="header__top__right__auth">
+ >> 59|         <%if(username === ""){ %>
+    60|           <a href="./sign-in.html"><i class="fa fa-user"></i> Login</a>
+    61|           
+    62|           <%}else{%>
+
+username is not defined
+20240426	23:41:31	c3dcc015-0322-424a-acc2-532906ecc8c5	Error: Not allowed by CORS
+20240426	23:42:07	31440dcd-1e71-4e19-b20a-431e40bacede	Error: Not allowed by CORS
+20240427	11:37:14	fbd91d88-369b-4b03-9200-a3e6a9688c66	Error: Not allowed by CORS
+20240427	11:38:02	91cdf26a-21dd-423f-847f-25a3a2ff85c6	Error: Not allowed by CORS
+20240427	11:38:26	4a1c7283-108f-494b-bd5d-f137571a0a66	Error: Not allowed by CORS
+20240427	22:55:24	88b75df4-5918-4746-ab6e-40cbdf314ca4	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	03:51:17	39f5c200-6484-4939-b452-cbc140342beb	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:12:08	aaf40c9e-2545-4b3a-80c2-f86760c2af32	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:15:28	fe979ddf-5e30-4fd4-bcf4-90d0158bb10c	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:15:29	703f19ed-36c4-4fb4-9aeb-3126c69bba25	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:15:30	2907752e-a0dd-49c2-bd53-d51cac5d3c2e	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:15:31	0db88406-98cb-4c17-aef8-4c66ba060c6f	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:20:38	91b3c803-d656-4551-9ed2-5566d58505e8	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:02	70219578-7187-4e50-8217-ab55bee66b5b	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:02	45c4e85d-e449-4656-8f7e-dca50289a8e4	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:06	ade33c6b-8159-4f4a-b47b-901a3bac9de6	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:06	dae0246e-f993-49a1-b299-03d6b21edf23	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:06	859447b5-8d80-4ec2-b2a5-e0a3d9be85c6	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:06	994a8b46-cc46-4a8e-a1a8-0fb75d091f41	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	8e513034-414a-47e1-924e-7c05193ef234	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	2b15998e-4174-41d2-8d10-ccfd10284b7f	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	4446887f-cb75-4b40-b2cb-54f50b0e27df	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	481fc183-71a7-4278-9839-c43975e9967b	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	f53bf7a4-3fe7-4904-ae65-f1565cd7e90e	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	f8eca6f7-8d26-407c-9c4e-72f166923ac1	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	0f660718-39c4-45e6-b75b-56ca5e5b48bb	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:07	6a417122-8b77-4b43-a153-b591e903ef33	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:08	23a3d17d-20be-45d9-bfa5-23bfa7775ef2	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:08	da925bcb-54db-4e77-a280-f027f2a3676a	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:08	e498c04e-7cc1-45d0-8a66-4739ca3aa817	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:08	86f672bb-dbac-49ff-9864-86bd3b34d12e	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:08	2af70f48-33df-4bfc-b67e-20c18e7135cf	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:22:08	effe8815-fda8-417c-9571-999df26d2dd4	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:40:44	76c6d5f5-93c5-4fa5-9eb9-1da956925ff0	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:41:58	5d0c3717-355a-43ee-85de-f551e35ff32c	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:42:31	3d8f11f3-d778-4f56-80be-7127e70e26f2	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240428	04:43:44	56c96872-f39f-4827-8165-37437e9028fa	Error: Failed to lookup view "/products.ejs" in views directory "C:\Users\USER\Documents\Web Dev\node\views"
+20240428	04:47:14	968fe24a-25dd-4734-8218-f6dabd5f20f3	Error: Failed to lookup view "/add-product.ejs" in views directory "C:\Users\USER\Documents\Web Dev\node\views"
+20240428	15:04:47	a049d88d-e3ba-4096-b124-6d08b47b1aaa	Error: Failed to lookup view "/add-product.ejs" in views directory "C:\Users\USER\Documents\Web Dev\node\views"
+20240428	15:07:58	ed65d604-71f4-4a6f-9346-8a544cf02bca	Error: Failed to lookup view "/add-product.ejs" in views directory "C:\Users\USER\Documents\Web Dev\node\views"
+20240428	15:09:28	c0d5257d-4591-4ee6-9ba0-002b728ede9b	Error: Failed to lookup view "/add-product.ejs" in views directory "C:\Users\USER\Documents\Web Dev\node\views"
+20240428	15:09:28	97db4529-c463-45d8-9695-28c674235ce2	Error: Failed to lookup view "/add-product.ejs" in views directory "C:\Users\USER\Documents\Web Dev\node\views"
+20240428	22:51:29	cdf07626-226d-4b5c-a725-94ad62292ce2	Error: ENOENT: no such file or directory, open 'C:\public\img\PXL_20230919_051444872-removebg.png'
+20240429	00:03:12	bbac2e84-d41d-40de-9c7e-b7fc154ab967	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240429	00:05:46	f6fa689f-b8c8-44cc-91f7-de365c037f29	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240429	00:10:06	0ced93a2-e057-4139-a2a1-61974fc7e871	Error: ENOENT: no such file or directory, stat 'C:\Users\USER\Documents\Web Dev\node\views\404.html'
+20240430	04:20:00	73b0e08e-c6b9-4f19-9196-61fed1f51805	TypeError: res.status(...).flash is not a function
+20240430	04:20:34	31472c19-cc67-43c2-8a72-fd18034841b4	TypeError: res.flash is not a function
+20240430	04:21:23	44cdb1b3-10bd-4fc8-952b-29dea232f8c5	TypeError: res.status(...).flash is not a function
+20240430	04:21:25	0abbc3ad-8d84-4233-90dd-1f91d6b74d1f	TypeError: res.status(...).flash is not a function
+20240430	04:25:15	309151bf-b870-4d86-9e91-a88a42e4fb5a	TypeError: res.status(...).flash is not a function
+20240430	04:25:47	9e72de79-cb95-4f48-be82-e85f4416a871	TypeError: res.status(...).flash is not a function
+20240430	04:25:52	06af9b26-3651-4bea-baa2-ac88a6c48ce4	TypeError: res.status(...).flash is not a function
+20240430	04:30:55	d896c3ca-a86b-456c-9320-fd6135ec64ae	TypeError: res.status(...).flash is not a function
+20240430	04:37:28	869236ee-e311-4603-b1d0-0197c12d8000	Error: req.flash() requires sessions
+20240430	04:43:37	d42f01a1-ead3-4ed2-9874-2dfffb4ac6a4	Error: req.flash() requires sessions
+20240430	04:43:43	4b5227be-5824-4b19-b83d-f720c9d94a6a	Error: req.flash() requires sessions
+20240430	04:43:44	2a6c29f6-5b9b-4b1c-ba84-b2774a4150a1	Error: req.flash() requires sessions
+20240430	04:45:38	d9755ee0-c253-4fdf-b66d-e2787ba66699	Error: secret option required for sessions
+20240430	04:45:38	29e7b932-d947-4b7a-98c2-747e6052a330	Error: secret option required for sessions
+20240430	04:49:36	44e8e797-ab7c-44e2-8b8f-bc5fd5bae6c7	TypeError: Cannot read properties of undefined (reading 'status')
+20240430	05:55:08	7875cc7d-030c-4f08-9523-0264d4a6ee6b	TypeError: res.status(...).flash is not a function
+20240430	05:55:11	eab3bda7-d048-4b25-9fc9-8002b4f496d2	TypeError: res.status(...).flash is not a function
+20240430	05:55:21	2274c9ab-1e6a-4289-8cd0-a0bcba3d7cb4	TypeError: res.status(...).flash is not a function
+20240430	05:55:32	69040ca1-9af7-4d5c-beb5-ca27a815aae7	TypeError: res.status(...).flash is not a function
+20240430	05:55:33	18aea02b-9b9b-4e3b-85ec-698bea47b25e	TypeError: res.status(...).flash is not a function
+20240430	05:55:34	ac8d7276-cbc7-4dff-a002-e13d5357e5c3	TypeError: res.status(...).flash is not a function
+20240430	05:55:35	ac373ed4-c880-44cb-b7a3-094b8976167f	TypeError: res.status(...).flash is not a function
+20240430	05:55:35	50fb140d-b4db-4556-a2e5-f38f6c19bf0e	TypeError: res.status(...).flash is not a function
+20240430	05:55:37	2928ec6e-adfd-4f74-bf3f-0856fe7ab639	TypeError: res.status(...).flash is not a function
+20240430	05:56:54	521ee374-85d1-4c05-a99a-eedbdd1d9597	TypeError: res.status(...).flash is not a function
+20240430	05:56:56	8b8b073c-8052-487d-89f0-8e168d4cff2f	TypeError: res.status(...).flash is not a function
+20240430	06:06:42	1e7a00c4-e2d2-47bc-b527-3d9779ff8d91	TypeError: res.status(...).flash is not a function
+20240430	06:06:44	69feb694-b7f1-4a50-b289-80990aa4488b	TypeError: res.status(...).flash is not a function
+20240430	06:06:44	c94d4d19-ede5-4fc1-96f6-f0701d62147c	TypeError: res.status(...).flash is not a function
+20240430	06:06:45	188fb31b-3f4d-48e6-820c-6d3c85819822	TypeError: res.status(...).flash is not a function
+20240430	06:06:45	e410b228-8f20-40f4-9bc4-4f3829ecdd5b	TypeError: res.status(...).flash is not a function
+20240430	06:06:45	d16f9ec6-8d5b-45ad-afc4-11bbd5ca9083	TypeError: res.status(...).flash is not a function
+20240430	06:06:45	b10fb63a-e293-46b7-b109-11d5c663691a	TypeError: res.status(...).flash is not a function
+20240430	06:06:45	a23fadd9-ca67-4975-bb0f-4f1d8ee0e2d1	TypeError: res.status(...).flash is not a function
+20240430	06:06:53	982e9163-7639-4022-8dd9-46ec2cf18e35	TypeError: res.status(...).flash is not a function
+20240430	07:17:15	736e3514-9284-492b-b045-d029f2e50482	Error: Not allowed by CORS
+20240430	08:47:34	fbcac508-a8e6-4099-a52f-994e8d658311	Error: ENOENT: no such file or directory, open 'C:\Users\USER\Documents\Web Dev\nodeGit\ecommerce\public\img\products\Screenshot 2024-04-29 134308.png'
+20240430	11:24:46	4dd24dc0-f78c-4e38-9c8a-a38a9ae0befc	TypeError: Cannot read properties of undefined (reading 'filename')
+20240430	12:29:41	c9d72f7e-23ae-43dc-8e76-ea39c6416b77	TypeError: Cannot read properties of undefined (reading 'filename')
+20240430	12:37:42	d8ed5b05-d06d-4f55-a967-ab75b3c9115b	TypeError: Cannot read properties of undefined (reading 'filename')
+20240430	16:44:20	d55997f7-378c-4817-aeb4-9e3bbcf13060	Error: Not allowed by CORS
+20240501	16:45:36	92b5ecbe-dc4f-48a7-b1c4-d191b7b4dcad	SyntaxError: Unexpected token o in JSON at position 1

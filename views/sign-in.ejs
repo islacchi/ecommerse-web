@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Silk Road</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Silk Road</div>
+        <!-- <div class="title signup">Sign up</div> -->
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Sign Up</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form class="login" id="loginForm">
+            <div id="message" style="display: block; color: red"></div>
+            <div class="field">
+              <input
+                type="text"
+                id="username"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field" style="display: flex; position: relative">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+                style="
+                  padding-right: 0px;
+                  flex: 1;
+                  margin-right: -0px;
+                  width: 10px;
+                "
+              />
+              <i
+                class="far fa-eye"
+                id="togglePassword"
+                style="
+                  cursor: pointer;
+                  position: absolute;
+                  right: 20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: rgb(99, 99, 99);
+                "
+              ></i>
+            </div>
+
+            <div class="pass-link">
+              <a href="forgotPass.html" target="_blank">Forgot password?</a>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LfJ3ccpAAAAALZgLUkGW6EkKgV8oCkOWdjYRfTe"></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="LOGIN" />
+            </div>
+            <div class="signup-link">Not a member? <a href="#">Sign up</a></div>
+          </form>
+
+          <form class="signup" id="signupForm" method="POST">
+            <div id="signupMessage" style="display: block; color: red"></div>
+            <div class="field">
+              <input
+                type="text"
+                id="usernameSignup"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field" style="display: flex; position: relative">
+              <input
+                type="password"
+                id="passwordSignup"
+                placeholder="Password"
+                required
+              />
+              <i
+                class="far fa-eye"
+                id="togglePassword1"
+                style="
+                  cursor: pointer;
+                  position: absolute;
+                  right: 20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: rgb(99, 99, 99);
+                "
+              ></i>
+              <!-- <input type="checkbox" id="showPasswordCheckbox" /> -->
+            </div>
+            <div class="field" style="display: flex; position: relative">
+              <input
+                type="password"
+                id="confirmPasswordSignup"
+                placeholder="Confirm password"
+                required
+              />
+              <i
+                class="far fa-eye"
+                id="togglePassword2"
+                style="
+                  cursor: pointer;
+                  position: absolute;
+                  right: 20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: rgb(99, 99, 99);
+                "
+              ></i>
+            </div>
+            <p id="confirmPasswordMessage"></p>
+            <div class="field">
+              <!-- <div class="g-recaptcha" data-sitekey="6LdZBsApAAAAACrs98YFI9hFYnULk4xQNoZ9pk8L" data-action="LOGIN"></div> -->
+             
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LfJ3ccpAAAAALZgLUkGW6EkKgV8oCkOWdjYRfTe" ></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input id="signupButton" type="submit" value="SIGN UP" />
+            </div>
+            <div class="login-link">
+              Already a member? <a href="#">Log in</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+
+    <script>
+      // const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      const loginLink = document.querySelector("form .login-link a");
+
+      signupBtn.onclick = () => {
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      };
+      loginBtn.onclick = () => {
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      };
+      signupLink.onclick = () => {
+        signupBtn.click();
+        return false;
+      };
+      loginLink.onclick = () => {
+        loginBtn.onclick();
+        return false;
+      };
+    </script>
+    <script src="js/showPassword.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
