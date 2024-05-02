@@ -1,6 +1,6 @@
     // Function to fetch data from the API and populate the table
     function fetchAndPopulateOrdersTable() {
-        fetch('http://localhost:3500/products',{
+        fetch('http://localhost:3500/orders',{
             credentials: "include",
         })
             .then(response => response.json())

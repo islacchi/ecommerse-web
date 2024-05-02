@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
+   
 </head>
 
 <body>
@@ -68,8 +69,8 @@
           const username = localStorage.getItem("username");
           // Update the text of the <p> tag with the username if it exists
           if (username) {
-            document.getElementById('prof').innerHTML = username;
-            console.log("changed successfully");
+            document.getElementById('prof').textContent = username;
+            console.log("changed successfully ", username);
           }
         });
       </script>
@@ -556,10 +557,11 @@
   <script src="js/mixitup.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
-  <!--<script src="js/featured_product.js"></script>
-  <script src="js/product_section_dynamic_listing.js"></script> -->
-  <script src="js/featProd.js"></script>
-  <script src="js/add_to_cart.js"></script>
+  <!--<script src="js/featured_product.js"></script>--->
+  <script src="js/product_section_dynamic_listing.js"></script> 
+  <script src="js/featProd2.js"></script>
+  <!-- <script src="js/add_to_cart.js"></script> -->
+ 
 </body>
 
 </html>

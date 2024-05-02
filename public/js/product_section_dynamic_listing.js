@@ -1,61 +1,33 @@
-const latestProductsData = [
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Carrot", 
-      price: "$30.00"
-    },
-    { 
-      imageUrl: "img/latest-product/lp-2.jpg", 
-      productName: "Adobo", 
-      price: "$25.00"
-    },
-    { 
-      imageUrl: "img/latest-product/lp-3.jpg", 
-      productName: "Orange", 
-      price: "$35.00"
-    }
-    // Add more objects for additional latest products if needed
-];
+let latestProductsData = [];
 
-// Sample data array for top-rated products
-const topRatedProductsData = [
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Seeds", 
-      price: "$40.00"
+fetch('http://localhost:3500/products', {
+    credentials: "include",
+    method: 'GET',
+    headers: {
+        'Authorization': "Bearer " + localStorage.getItem("accessToken"),
     },
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Laptop", 
-      price: "$45.00"
-    },
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Cellphone", 
-      price: "$50.00"
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
     }
-    // Add more objects for additional top-rated products if needed
-];
+    return response.json();
+})
+.then(data => {
+    console.log('Data from server:', data); // Log the data from the server
+    if (!Array.isArray(data.products)) {
+        throw new Error('Products data is not an array');
+    }
+    // Limiting the number of products to a maximum of three
+    latestProductsData = data.products.slice(0, 3);
+    console.log('Latest products:', latestProductsData); // Log the latest products data
+    populateProducts(); // Call the function to populate products after fetching data
+})
+.catch(error => {
+    console.error('Error:', error);
+});
 
-const reviewProductsData = [
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Review product 1", 
-      price: "$40.00"
-    },
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Review product 1", 
-      price: "$45.00"
-    },
-    { 
-      imageUrl: "img/latest-product/lp-1.jpg", 
-      productName: "Review product 1", 
-      price: "$50.00"
-    }
-    // Add more objects for additional top-rated products if needed
-];
-// Function to populate products
+
 // Function to populate products
 function populateProducts() {
     const productSections = document.querySelectorAll('.latest-product__text');
@@ -66,14 +38,13 @@ function populateProducts() {
         if (heading) {
             const headingText = heading.textContent.trim();
             const slider = section.querySelector('.latest-product__slider');
-            const productsData = headingText === 'Latest Products' ? latestProductsData : headingText === 'Top Rated Products' ? topRatedProductsData : headingText === 'Review Products' ? reviewProductsData : null;
+            const productsData = headingText === 'Latest Products' ? latestProductsData : headingText === 'Top Rated Products' ? latestProductsData : headingText === 'Review Products' ? latestProductsData : null;
 
             if (productsData && slider) {
                 // Clear existing content
                 slider.innerHTML = '';
                 // Loop through the data and create HTML elements for each product
                 productsData.forEach(product => {
-
                     const productLink = document.createElement('a');
                     productLink.href = '#';
                     productLink.className = 'latest-product__item';
@@ -105,7 +76,3 @@ function populateProducts() {
         }
     });
 }
-
-// Call the function to populate products
-populateProducts();
-

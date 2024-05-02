@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 fetch("http://localhost:3500/products", {
   credentials: "include",
   headers: {
@@ -65,7 +67,7 @@ function populateProducts(response) {
         liRetweet.innerHTML = '<a href="#"><i class="fa fa-retweet"></i></a>';
         
         const liCart = document.createElement('li');
-        liCart.innerHTML = `<a id="addToCart" href="#" name='${product._id}'><i class="fa fa-shopping-cart"></i></a>`;
+        liCart.innerHTML = `<a id="addToCart" name='${product._id}'><i class="fa fa-shopping-cart"></i></a>`;
         ul.appendChild(liHeart);
         ul.appendChild(liRetweet);
         ul.appendChild(liCart);
@@ -85,6 +87,7 @@ function populateProducts(response) {
         col.appendChild(featuredItem);
 
         container.appendChild(col);
+         add(liCart);
       });
     } else {
       console.error('Response does not contain a "products" property:', response);
@@ -93,3 +96,45 @@ function populateProducts(response) {
     console.error('Response is not an object:', response);
   }
 }
+
+function add(liCart){
+ 
+  const anchorElement = document.getElementById('addToCart'); 
+
+  if(anchorElement){
+  const nameAttributeValue = anchorElement.name;
+  anchorElement.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    // Perform POST fetch operation
+    fetch("http://localhost:3500/cart", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        'Authorization': "Bearer "+localStorage.getItem("accessToken"),
+      },
+      body: JSON.stringify({
+        // Your data to be sent in the request body
+        // Example: { key: value }
+        productId: nameAttributeValue
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle response data if needed
+      console.log(data);
+      alert("done");
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+  liCart.appendChild(anchorElement);
+  }else{
+    console.log("no name found");
+  }
+   
+}
+
+
+});
+
