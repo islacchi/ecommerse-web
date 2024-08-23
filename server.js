@@ -47,6 +47,7 @@ app.set('view engine', 'html');
 
 //app.get('/favicon.ico', (req, res) => res.status(204).end());
 app.use('/', require('./routes/root'));
+app.use('/cart', require('./routes/order_prod'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
 app.use('/forgotpass', require('./routes/forgottenPass'));

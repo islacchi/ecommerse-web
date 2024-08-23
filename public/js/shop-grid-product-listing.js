@@ -1,28 +1,32 @@
 // Sample database response
-const productsData = [
-    { 
-        imageUrl: "img/latest-product/lp-1.jpg", 
-        productName: "Nikko Cutie ryzen 5 desktop", 
-        price: "$30.00",
-        category: "desktop",
-        brand:"acer"
+let productsData = [];
+
+fetch('http://localhost:3500/products', {
+    credentials: "include",
+    method: 'GET',
+    headers: {
+        'Authorization': "Bearer " + localStorage.getItem("accessToken"),
     },
-    { 
-        imageUrl: "img/latest-product/king baldwin.jpeg",  
-        productName: "king carloes", 
-        price: "$30.00",
-        category: "laptop",
-        brand:"xiaomi"
-    },
-    { 
-        imageUrl: "img/featured/feature-1.jpg",  
-        productName: "Urgh printer", 
-        price: "$30.00",
-        category: "printer",
-        brand:"dell",
-    },
-    // Add more objects for additional products if needed
-];
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
+})
+.then(data => {
+    console.log('Data from server:', data); // Log the data from the server
+    if (!Array.isArray(data.products)) {
+        throw new Error('Products data is not an array');
+    }
+    // Limiting the number of products to a maximum of three
+    productsData = data.products.slice(0, 3);
+    console.log('Latest products:', productsData); // Log the latest products data
+    populateProducts(productsData); // Call the function to populate products after fetching data
+})
+.catch(error => {
+    console.error('Error:', error);
+});
 
 // Function to create product HTML elements
 function createProductElement(product) {
@@ -39,7 +43,7 @@ function createProductElement(product) {
                 <ul class="product__item__pic__hover">
                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                     <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li id="liCart"></li> <!-- Placeholder for cart icon -->
                 </ul>
             </div>
             <!-- Product details -->
@@ -69,12 +73,14 @@ function populateProducts(products) {
         const productItem = createProductElement(product);
         // Append each product item to the container
         productRow.appendChild(productItem);
+        add(productItem.querySelector('#liCart'), product._id); // Call add function to attach add-to-cart functionality
     });
 
     // Update the product counter
     const productCountSpan = document.getElementById('productCount');
     productCountSpan.textContent = products.length;
 }
+
 
 
 // ACER brand
@@ -161,5 +167,42 @@ document.querySelector('#allProductsLink').addEventListener('click', function(ev
     populateProducts(productsData);
 });
 
-// Call the function to populate products when the page loads
-populateProducts(productsData);
+//Add to cart code
+function add(liCart, productId){
+    const anchorElement = document.createElement('a');
+    anchorElement.href = '#';
+    anchorElement.className = 'add-to-cart';
+    anchorElement.dataset.productId = productId;
+    
+    const iconElement = document.createElement('i');
+    iconElement.className = 'fa fa-shopping-cart';
+    
+    anchorElement.appendChild(iconElement);
+    liCart.appendChild(anchorElement);
+  
+    anchorElement.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      const productId = event.target.dataset.productId;
+      // Perform POST fetch operation
+      fetch("http://localhost:3500/cart", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          'Authorization': "Bearer "+localStorage.getItem("accessToken"),
+          'Content-Type': 'application/json' // Specify JSON content type
+        },
+        body: JSON.stringify({
+          productId: productId
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle response data if needed
+        console.log(data);
+        alert("Item added to cart");
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+}
